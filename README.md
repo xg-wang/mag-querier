@@ -9,9 +9,9 @@ npm monogojs
 node main.js
 ```
 
-Then simply turn on the browser and goto <http://localhost/8080/paths/:id1/:id2>
+Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&id2=:id2>
 
-say <http://localhost/8080/paths/2140251881/2140251882>
+say <http://localhost/8080/paths?id1=2140251881&id2=2140251882>
 
 ## hints
 - `lib/client.js` creates a MAG client to query from the Microsoft website for entity data;
