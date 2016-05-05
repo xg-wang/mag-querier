@@ -4,8 +4,7 @@ This [restify.js](http://restify.com/) demo if for the msra competiton.
 
 ## usage
 ```javascript
-npm restify
-npm monogojs
+npm install restify
 node main.js
 ```
 
