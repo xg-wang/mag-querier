@@ -102,7 +102,7 @@ Id1 ==> AA.AuId ==> Id2(查询Id1和Id2的AA.AuId是否有相同)
 Id1 ==> Id3 ==>Id2(查询Id1的Rid(Id3)的Rid是否包括Id2,首先判断哪些Id3的F.Fid和Id2是一样的)
 ```
 
-ThreeHop:
+ThreeHop: [需要对RId进一步请求得到F, J, C, AuId]
 
 ```
 Id1 ==> F.Fid ==> Id3 ==> Id2(Id3可以等于Id1)
