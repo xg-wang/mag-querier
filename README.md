@@ -89,7 +89,7 @@ AA.AuId1 == Id == Id == AA.AuId2
 OneHop:
 
 ```
-Id1 ==> Id2(需要双向都判断)
+Id1 ==> Id2
 ```
 
 TwoHop:（领域不同，会议和期刊可能相同吗）
