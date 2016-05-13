@@ -89,31 +89,31 @@ AA.AuId1 == Id == Id == AA.AuId2
 OneHop:
 
 ```
-Id1 ==> Id2(查询Id1的Rid是不是包含Id2)
+Id1 ?==? Id2(需要双向都判断)
 ```
 
 TwoHop:（领域不同，会议和期刊可能相同吗）
 
 ```
-Id1 ==> F.Fid ==> Id2(查询Id1和Id2的F.Fid是否相同)
-Id1 ==> C.Cid ==> Id2(查询Id1和Id2的C.Cid是否相同)
-Id1 ==> J.Jid ==> Id2(查询Id1和Id2的J.Jid是否相同)
-Id1 ==> AA.AuId ==> Id2(查询Id1和Id2的AA.AuId是否有相同)
-Id1 ==> Id3 ==>Id2(查询Id1的Rid(Id3)的Rid是否包括Id2,首先判断哪些Id3的F.Fid和Id2是一样的)
+Id1 <==> F.Fid <==> Id2(查询Id1和Id2的F.Fid是否相同)
+Id1 <==> C.Cid <==> Id2(查询Id1和Id2的C.Cid是否相同)
+Id1 <==> J.Jid <==> Id2(查询Id1和Id2的J.Jid是否相同)
+Id1 <==> AA.AuId <==> Id2(查询Id1和Id2的AA.AuId是否有相同)
+Id1 ?==? Id3 ?==? Id2(查询Id1的Rid(Id3)的Rid是否包括Id2,首先判断哪些Id3的F.Fid和Id2是一样的)[需要双向都判断]
 ```
 
 ThreeHop: [需要对RId进一步请求得到F, J, C, AuId]
 
 ```
-Id1 ==> F.Fid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> C.Cid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> J.Jid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> AA.AuId ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> Id3 ==> F.Fid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> C.Cid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> J.Jid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> AA.AuId ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> Id4 ==> Id2(这个判断比较麻烦)
+Id1 <==> F.Fid <==> Id3 ?==? Id2(Id3可以等于Id1)
+Id1 <==> C.Cid <==> Id3 ?==? Id2(Id3可以等于Id1)
+Id1 <==> J.Jid <==> Id3 ?==? Id2(Id3可以等于Id1)
+Id1 <==> AA.AuId <==> Id3 ?==? Id2(Id3可以等于Id1)
+Id1 ?==? Id3 <==> F.Fid <==> Id2(Id3可以等于Id2)
+Id1 ?==? Id3 <==> C.Cid <==> Id2(Id3可以等于Id2)
+Id1 ?==? Id3 <==> J.Jid <==> Id2(Id3可以等于Id2)
+Id1 ?==? Id3 <==> AA.AuId <==> Id2(Id3可以等于Id2)
+Id1 ?==? Id3 ?==? Id4 ?==? Id2(这个判断比较麻烦)
 ```
 
 ### Id1, AA.AuId2
