@@ -1,0 +1,55 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'restify' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 verbose install initial load of D:\azure_git\mag-querier\package.json
+5 warn package.json mag-querier@0.0.1 No repository field.
+6 verbose readDependencies loading dependencies from D:\azure_git\mag-querier\package.json
+7 silly cache add args [ 'restify@git://github.com/restify/node-restify.git#master',
+7 silly cache add   null ]
+8 verbose cache add spec restify@git://github.com/restify/node-restify.git#master
+9 silly cache add parsed spec Result {
+9 silly cache add   raw: 'restify@git://github.com/restify/node-restify.git#master',
+9 silly cache add   scope: null,
+9 silly cache add   name: 'restify',
+9 silly cache add   rawSpec: 'git://github.com/restify/node-restify.git#master',
+9 silly cache add   spec: 'git://github.com/restify/node-restify.git#master',
+9 silly cache add   type: 'hosted',
+9 silly cache add   hosted:
+9 silly cache add    { type: 'github',
+9 silly cache add      ssh: 'git@github.com:restify/node-restify.git#master',
+9 silly cache add      sshUrl: 'git+ssh://git@github.com/restify/node-restify.git#master',
+9 silly cache add      httpsUrl: 'git+https://github.com/restify/node-restify.git#master',
+9 silly cache add      gitUrl: 'git://github.com/restify/node-restify.git#master',
+9 silly cache add      shortcut: 'github:restify/node-restify#master',
+9 silly cache add      directUrl: 'https://raw.githubusercontent.com/restify/node-restify/master/package.json' } }
+10 verbose addRemoteGit caching git://github.com/restify/node-restify.git#master
+11 verbose addRemoteGit git://github.com/restify/node-restify.git#master is a repository hosted by github
+12 silly tryClone cloning git://github.com/restify/node-restify.git#master via git://github.com/restify/node-restify.git#master
+13 verbose tryClone git-github-com-restify-node-restify-git-a50ed02f not in flight; caching
+14 verbose correctMkdir C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+15 verbose makeDirectory C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes creation not in flight; initializing
+16 verbose makeCacheDir UID & GID are irrelevant on win32
+17 error git clone --template=C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/restify/node-restify.git C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes\git-github-com-restify-node-restify-git-a50ed02f: undefined
+17 error git clone --template=C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/restify/node-restify.git C:\Users\wangkaiming\AppData\Roaming\npm-cache\_git-remotes\git-github-com-restify-node-restify-git-a50ed02f: undefined
+18 verbose stack Error: not found: git
+18 verbose stack     at F (D:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:63:19)
+18 verbose stack     at E (D:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:72:29)
+18 verbose stack     at D:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:16
+18 verbose stack     at D:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+18 verbose stack     at D:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+18 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+19 verbose cwd D:\azure_git\mag-querier
+20 error Windows_NT 6.1.7601
+21 error argv "D:\\Program Files\\nodejs\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "restify"
+22 error node v4.4.2
+23 error npm  v2.15.0
+24 error code ENOGIT
+25 error not found: git
+26 error Failed using git.
+26 error This is most likely not a problem with npm itself.
+26 error Please check if you have git installed and in your PATH.
+27 verbose exit [ 1, true ]
