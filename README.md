@@ -10,9 +10,10 @@ node main.js
 
 Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&id2=:id2>
 
-say <http://localhost:8080/paths?id1=1982152022&id2=2147152072>
+### 测试案例
 
-这两个Id都是Id类型，暂时用来DEBUG情况1的oneHop, twoHop.
+- <http://localhost:8080/paths?id1=1982152022&id2=2147152072> Id Id，Case 1;
+- <http://localhost:8080/paths?id1=2124455071&id2=2307349597> AuId AuId, Case 4.
 
 ## hints
 - `lib/client.js` creates a MAG client to query from the Microsoft website for entity data;
