@@ -13,6 +13,7 @@ Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&i
 ### 测试案例
 
 - <http://localhost:8080/paths?id1=1982152022&id2=2147152072> Id Id，Case 1;
+- <http://localhost:8080/paths?id1=2140251882&id2=2134693834> Id AuId Case 2
 - <http://localhost:8080/paths?id1=2124455071&id2=2307349597> AuId AuId, Case 4.
 
 ## hints
