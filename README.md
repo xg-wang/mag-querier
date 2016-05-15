@@ -42,25 +42,25 @@ Id1 ==> Id2
 TwoHop:（领域不同，会议和期刊可能相同吗）
 
 ```
-Id1 ==> F.Fid ==> Id2(查询Id1和Id2的F.Fid是否相同)
-Id1 ==> C.Cid ==> Id2(查询Id1和Id2的C.Cid是否相同)
-Id1 ==> J.Jid ==> Id2(查询Id1和Id2的J.Jid是否相同)
-Id1 ==> AA.AuId ==> Id2(查询Id1和Id2的AA.AuId是否有相同)
-Id1 ==> Id3 ==> Id2(查询Id1的Rid(Id3)的Rid是否包括Id2,首先判断哪些Id3的F.Fid和Id2是一样的)[需要双向都判断]
+Id1 ==> F.Fid ==> Id2
+Id1 ==> C.Cid ==> Id2
+Id1 ==> J.Jid ==> Id2
+Id1 ==> AA.AuId ==> Id2
+Id1 ==> Id3 ==> Id2
 ```
 
 ThreeHop: [需要对RId进一步请求得到F, J, C, AuId]
 
 ```
-Id1 ==> F.Fid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> C.Cid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> J.Jid ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> AA.AuId ==> Id3 ==> Id2(Id3可以等于Id1)
-Id1 ==> Id3 ==> F.Fid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> C.Cid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> J.Jid ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> AA.AuId ==> Id2(Id3可以等于Id2)
-Id1 ==> Id3 ==> Id4 ==> Id2(这个判断比较麻烦)
+Id1 ==> F.Fid ==> Id3 ==> Id2
+Id1 ==> C.Cid ==> Id3 ==> Id2
+Id1 ==> J.Jid ==> Id3 ==> Id2
+Id1 ==> AA.AuId ==> Id3 ==> Id2
+Id1 ==> Id3 ==> F.Fid ==> Id2
+Id1 ==> Id3 ==> C.Cid ==> Id2
+Id1 ==> Id3 ==> J.Jid ==> Id2
+Id1 ==> Id3 ==> AA.AuId ==> Id2
+Id1 ==> Id3 ==> Id4 ==> Id2
 ```
 
 ### Id1, AA.AuId2
@@ -80,11 +80,11 @@ Id1 ==> Id2 ==> AA.AuId2
 ThreeHop:
 
 ```
-Id1 ==> F.Fid ==> Id3 ==> AA.AuId2(Id3可以等于Id1)
-Id1 ==> C.Cid ==> Id3 ==> AA.AuId2(Id3可以等于Id1)
-Id1 ==> J.Jid ==> Id3 ==> AA.AuId2(Id3可以等于Id1)
+Id1 ==> F.Fid ==> Id3 ==> AA.AuId2
+Id1 ==> C.Cid ==> Id3 ==> AA.AuId2
+Id1 ==> J.Jid ==> Id3 ==> AA.AuId2
 Id1 ==> Id3 ==> Id4 ==> AA.AuId2
-Id1 ==> AA.AuId3 ==> Id4 ==> AA.AuId2(Id4可以等于Id1，从而AA.AuId2和AA.AuId3共同写了Id1)
+Id1 ==> AA.AuId3 ==> Id4 ==> AA.AuId2
 Id1 ==> AA.AuId3 ==> AA.AFid ==> AA.AuId2
 ```
 
@@ -105,11 +105,11 @@ AA.AuId1 ==> Id3 ==> Id2
 ThreeHop:
 
 ```
-AA.AuId1 ==> Id3 ==> AA.AuId4 ==> Id2(AA.AuId1可以和AA.AuId4相同)
-AA.AuId1 ==> AA.AFid ==> AA.AuId4 ==> Id2(AA.AuId1可以和AA.AuId4相同)
-AA.AuId1 ==> Id3 ==> F.Fid ==> Id2(Id3可以等于Id2)
-AA.AuId1 ==> Id3 ==> C.Cid ==> Id2(Id3可以等于Id2)
-AA.AuId1 ==> Id3 ==> J.Jid ==> Id2(Id3可以等于Id2)
+AA.AuId1 ==> Id3 ==> AA.AuId4 ==> Id2
+AA.AuId1 ==> AA.AFid ==> AA.AuId4 ==> Id2
+AA.AuId1 ==> Id3 ==> F.Fid ==> Id2
+AA.AuId1 ==> Id3 ==> C.Cid ==> Id2
+AA.AuId1 ==> Id3 ==> J.Jid ==> Id2
 AA.AuId1 ==> Id3 ==> Id4 ==> Id2 
 ```
 
