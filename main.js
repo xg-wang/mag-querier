@@ -14,7 +14,7 @@ var querier = require('./lib');
   var client = querier.createClient();
   var server = querier.createServer(client);
 
-  server.listen(80, function onListening() {
+  server.listen(8080, function onListening() {
       console.log('listening at %s', server.url);
   });
 })();
