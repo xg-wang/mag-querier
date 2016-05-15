@@ -83,9 +83,9 @@ ThreeHop:
 Id1 ==> F.Fid ==> Id3 ==> AA.AuId2
 Id1 ==> C.Cid ==> Id3 ==> AA.AuId2
 Id1 ==> J.Jid ==> Id3 ==> AA.AuId2
-Id1 ==> Id3 ==> Id4 ==> AA.AuId2
 Id1 ==> AA.AuId3 ==> Id4 ==> AA.AuId2
 Id1 ==> AA.AuId3 ==> AA.AFid ==> AA.AuId2
+Id1 ==> Id3 ==> Id4 ==> AA.AuId2
 ```
 
 ### AA.AuId1, Id2
