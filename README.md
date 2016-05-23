@@ -1,16 +1,16 @@
 # MAG-QUERIER
 
-This [restify.js](http://restify.com/) demo if for the msra competiton.
+This [restify.js](http://restify.com/) demo if for the [msra competiton](https://studentclub.msra.cn/bop2016/topic/).
 
 ## usage
 ```javascript
-npm install restify
+npm install restify restify-clients
 node main.js
 ```
 
 Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&id2=:id2>
 
-### 测试案例
+### Test cases
 
 - <http://localhost:8080/paths?id1=1982152022&id2=2147152072> Id Id，Case 1;
 - <http://localhost:8080/paths?id1=2140251882&id2=2134693834> Id AuId, Case 2;
@@ -21,17 +21,9 @@ Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&i
 - `lib/client.js` creates a MAG client to query from the Microsoft website for entity data;
 - `lib/server.js` creates a local REST endpoint to handle to actual input pair, uses the client to query MAG. Promise is used to perform asycronous IO.
 
-## TODO
-- The algorithm should be implemented in server `function queryPaths(req, res, next){}`.
-- add middlewares
-- add HTTP error code responds
-- RId相等是指数组还是某个元素 ==> 某元素
-
 # Possible Connections
 
-## 按请求
-我们不认为存在引用的环
-
+## By request
 ### Id1, Id2
 OneHop:
 
@@ -39,7 +31,7 @@ OneHop:
 Id1 ==> Id2
 ```
 
-TwoHop:（领域不同，会议和期刊可能相同吗）
+TwoHop:
 
 ```
 Id1 ==> F.Fid ==> Id2
@@ -49,7 +41,7 @@ Id1 ==> AA.AuId ==> Id2
 Id1 ==> Id3 ==> Id2
 ```
 
-ThreeHop: [需要对RId进一步请求得到F, J, C, AuId]
+ThreeHop: 
 
 ```
 Id1 ==> F.Fid ==> Id3 ==> Id2
