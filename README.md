@@ -1,11 +1,11 @@
 # MAG-QUERIER
 
-This [restify.js](http://restify.com/) demo if for the [msra competiton](https://studentclub.msra.cn/bop2016/topic/).
+This [restify.js](http://restify.com/) demo is for the [msra competiton](https://studentclub.msra.cn/bop2016/topic/).
 
 ## usage
 ```javascript
-npm install restify restify-clients
-node main.js
+npm i
+npm start
 ```
 
 Then simply turn on the browser and goto <http://localhost/8080/paths?id1=:id1&id2=:id2>
